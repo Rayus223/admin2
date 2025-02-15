@@ -1,0 +1,276 @@
+/* Main Container */
+.teacher-list {
+    padding: 32px;
+    background: linear-gradient(135deg, #f8faff 0%, #f0f4f8 100%);
+    min-height: calc(100vh - 64px);
+}
+
+/* Stats Card */
+.stats-card {
+    margin-bottom: 32px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(24, 144, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stats-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.stats-row {
+    padding: 16px;
+}
+
+/* Table Styling */
+.main-table {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.ant-table {
+    border-radius: 12px;
+}
+
+.ant-table-thead > tr > th {
+    background: #f8faff !important;
+    font-weight: 600;
+    padding: 16px;
+}
+
+.ant-table-tbody > tr > td {
+    padding: 16px;
+}
+
+.ant-table-tbody > tr:hover > td {
+    background: #f0f7ff !important;
+}
+
+/* Tags Styling */
+.ant-tag {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: none;
+}
+
+/* Buttons */
+.action-button {
+    margin-bottom: 24px;
+    padding: 8px 24px;
+    height: auto;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(24, 144, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.25);
+}
+
+/* Modal Styling */
+.teacher-details {
+    padding: 24px;
+    background: #f8faff;
+    border-radius: 12px;
+}
+
+.teacher-details h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a2b3c;
+    margin-bottom: 24px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.detail-row strong {
+    min-width: 120px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+/* Tabs Styling */
+.ant-tabs-nav {
+    margin-bottom: 24px !important;
+}
+
+.ant-tabs-tab {
+    padding: 12px 24px !important;
+    transition: all 0.3s ease;
+}
+
+.ant-tabs-tab-active {
+    background: #e6f7ff;
+    border-radius: 8px;
+}
+
+.ant-tabs-ink-bar {
+    height: 3px !important;
+    border-radius: 3px;
+}
+
+/* Vacancy Section */
+.vacancy-section {
+    background: rgb(80, 172, 168);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+  
+  .action-button {
+    margin-right: 16px;
+  }
+  
+  .ant-input-search {
+    max-width: 300px;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .teacher-list {
+        padding: 16px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .detail-row strong {
+        min-width: auto;
+    }
+    
+    .stats-card {
+        margin-bottom: 24px;
+    }
+    
+    .action-button {
+        width: 100%;
+    }
+}
+
+/* Animation for Loading States */
+.ant-spin-spinning {
+    transition: all 0.3s ease;
+}
+
+/* Custom Scrollbar */
+.ant-table-body {
+    scrollbar-width: thin;
+    scrollbar-color: #d9d9d9 #f0f0f0;
+}
+
+.ant-table-body::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.ant-table-body::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 3px;
+}
+
+.ant-table-body::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 3px;
+}
+
+/* Status Colors */
+.ant-tag-green {
+    background: #f6ffed;
+    color: #52c41a;
+}
+
+.ant-tag-orange {
+    background: #fff7e6;
+    color: #fa8c16;
+}
+
+.ant-tag-red {
+    background: #fff1f0;
+    color: #f5222d;
+}
+
+.ant-tag-blue {
+    background: #e6f7ff;
+    color: #1890ff;
+}
+
+/* CV Button Styling */
+.cv-button {
+    background: #e6f7ff;
+    color: #1890ff;
+    border: 1px solid #91d5ff;
+    padding: 4px 12px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+    background: #1890ff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(24, 144, 255, 0.25);
+}
+
+/* CV Modal Styling */
+.cv-modal .cv-modal-header {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: flex-end;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.cv-modal .ant-modal-body {
+    padding: 0;
+    height: calc(100vh - 200px);
+    overflow: hidden;
+}
+
+.cv-modal object {
+    border: none;
+}
+
+
+.cv-modal iframe {
+    background: #fff;
+}
+
+/* Responsive CV Modal */
+@media (max-width: 768px) {
+    .cv-modal {
+        max-width: 95vw !important;
+    }
+    
+    .cv-iframe {
+        height: 400px;
+    }
+}

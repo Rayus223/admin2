@@ -1,0 +1,128 @@
+.dashboard {
+    padding: 32px;
+    background: linear-gradient(135deg, #f8faff 0%, #f0f4f8 100%);
+    min-height: 100vh;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Overview Section */
+.overview-section {
+    margin-bottom: 48px;
+}
+
+/* Grid Container for Cards */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    margin-top: 24px;
+    width: 100%;
+}
+
+/* Individual Card Styling */
+.stat-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(24, 144, 255, 0.1);
+}
+
+/* Section Titles */
+.section-title {
+    color: #1a2b3c;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 48px 0 24px 0;
+    letter-spacing: -0.5px;
+}
+
+/* Card Content */
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stat-label {
+    color: #4a5568;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1890ff;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+/* Status-specific cards with improved colors */
+.status-pending {
+    background: linear-gradient(145deg, #fff9f0, #fff);
+}
+
+.status-approved {
+    background: linear-gradient(145deg, #f0fff4, #fff);
+}
+
+.status-rejected {
+    background: linear-gradient(145deg, #fff1f0, #fff);
+}
+
+.status-pending .stat-value {
+    color: #fa8c16;
+}
+
+.status-approved .stat-value {
+    color: #52c41a;
+}
+
+.status-rejected .stat-value {
+    color: #ff4d4f;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .stats-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .stat-value {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 20px;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin: 32px 0 20px 0;
+    }
+    
+    .stat-card {
+        padding: 24px;
+    }
+}

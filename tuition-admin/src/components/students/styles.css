@@ -1,0 +1,31 @@
+.student-list {
+    padding: 24px;
+}
+
+.student-list h1 {
+    margin-bottom: 24px;
+    color: #1890ff;
+}
+
+.student-details {
+    padding: 20px;
+}
+
+.detail-row {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.detail-row strong {
+    min-width: 120px;
+    color: #595959;
+}
+
+.ant-table-wrapper {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
