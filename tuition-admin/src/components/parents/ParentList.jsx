@@ -29,7 +29,7 @@ const ParentList = () => {
     const fetchParents = async () => {
         try {
             // Update the endpoint to match the backend route
-            const response = await fetch('http://localhost:5000/api/parents/all');
+            const response = await fetch('https://api.dearsirhometuition.com/api/parents/all');
             const data = await response.json();
             if (data.success) {
                 setParents(data.data);
@@ -63,7 +63,7 @@ const ParentList = () => {
 
     const handleDelete = async (id) => {
         try {
-            await fetch(`http://localhost:5000/api/parents/${id}`, {
+            await fetch(`https://api.dearsirhometuition.com/api/parents/${id}`, {
                 method: 'DELETE'
             });
             message.success('Parent application deleted successfully');
@@ -90,7 +90,7 @@ const ParentList = () => {
             localStorage.setItem('newVacancyData', JSON.stringify(vacancyData));
 
             // Update parent status to pending
-            await fetch(`http://localhost:5000/api/parents/${record._id}/status`, {
+            await fetch(`https://api.dearsirhometuition.com/api/parents/${record._id}/status`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -131,7 +131,7 @@ const ParentList = () => {
     };
 
     useEffect(() => {
-        const ws = new WebSocket('ws://localhost:5000');
+        const ws = new WebSocket('wss://api.dearsirhometuition.com');
 
         ws.onmessage = (event) => {
             const data = JSON.parse(event.data);
